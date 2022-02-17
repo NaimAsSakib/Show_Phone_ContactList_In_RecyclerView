@@ -5,9 +5,6 @@ public class ContactPojo {
     private String ContactName;
     private String ContactNumber;
 
-    public ContactPojo(){
-
-    }
 
     public ContactPojo(String contactImage, String contactName, String contactNumber) {
         ContactImage = contactImage;

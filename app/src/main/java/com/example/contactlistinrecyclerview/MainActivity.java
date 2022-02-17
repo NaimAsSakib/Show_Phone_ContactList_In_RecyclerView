@@ -44,20 +44,22 @@ public class MainActivity extends AppCompatActivity {
         programAdapter=new ProgramAdapter(this,contactPojoArrayList);
         recyclerView.setAdapter(programAdapter);
 
+        //For User permission to read contacts
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.READ_CONTACTS)
                 .withListener(new PermissionListener() {
                     @Override
                     public void onPermissionGranted(PermissionGrantedResponse response) {
                         if(response.getPermissionName().equals(Manifest.permission.READ_CONTACTS)){
-                            getContacts(); //method is written below
+
+                            getContacts(); //method for showing contacts after getting permission from user
                         }
                     }
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
 
-                        Toast.makeText(MainActivity.this,"Permission must be granted",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Permission must be granted",Toast.LENGTH_LONG).show();
                     }
 
                     @Override
