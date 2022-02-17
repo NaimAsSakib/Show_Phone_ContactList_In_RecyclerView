@@ -60,11 +60,6 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.ViewHold
 
         holder.cImage.setImageResource(R.drawable.ic_baseline_person_24);
 
-        /*if(item.getContactImage()!=null){
-            Picasso.get().load(item.getContactImage()).into(holder.cImage);
-        }else{
-            holder.cImage.setImageResource(R.drawable.ic_baseline_person_24);
-        }*/
     }
 
     @Override
