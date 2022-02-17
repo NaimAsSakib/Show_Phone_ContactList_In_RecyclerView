@@ -12,7 +12,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="7dp"
         android:src="@drawable/ic_baseline_person_24"
-        app:civ_border_color="@color/black"
+        app:civ_border_color="@color/purple_200"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
