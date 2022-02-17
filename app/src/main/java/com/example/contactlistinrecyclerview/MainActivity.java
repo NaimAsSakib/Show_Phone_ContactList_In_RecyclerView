@@ -24,8 +24,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    //RecyclerView.Adapter programAdapter;
-    ProgramAdapter programAdapter;
+    RecyclerView.Adapter programAdapter;
     RecyclerView.LayoutManager layoutManager;
     ArrayList<ContactPojo> contactPojoArrayList;
 
