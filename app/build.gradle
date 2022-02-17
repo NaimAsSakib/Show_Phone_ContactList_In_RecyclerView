@@ -38,5 +38,4 @@ dependencies {
 
     implementation 'com.mikhaellopez:circularimageview:4.3.0'   //for CircularImageView
     implementation 'com.karumi:dexter:6.0.2'  //dexter
-    implementation 'com.squareup.picasso:picasso:2.71828'
 }
