@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getContacts() {
         Cursor phones=getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                null,null,null,null);
+                null,null,null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME);
         while (phones.moveToNext()){
             @SuppressLint("Range") String name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
             @SuppressLint("Range") String phoneNumber=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
