@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("Range") String phoneNumber=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
             @SuppressLint("Range") String phoneUri=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.PHOTO_URI));
 
+            //These (82-85) codes are for only showing contacts in RCV
            /* ContactPojo contact=new ContactPojo(phoneUri,name,phoneNumber);
             contactPojoArrayList.add(contact);
             programAdapter.notifyDataSetChanged();*/
