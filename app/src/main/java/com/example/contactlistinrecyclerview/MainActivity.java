@@ -79,8 +79,29 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("Range") String phoneNumber=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
             @SuppressLint("Range") String phoneUri=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.PHOTO_URI));
 
-            ContactPojo contact=new ContactPojo(phoneUri,name,phoneNumber);
+           /* ContactPojo contact=new ContactPojo(phoneUri,name,phoneNumber);
             contactPojoArrayList.add(contact);
+            programAdapter.notifyDataSetChanged();*/
+
+
+            int flag = 0;
+            if(contactPojoArrayList.size() == 0){
+                contactPojoArrayList.add(new ContactPojo(phoneUri,name, phoneNumber));
+            }
+            for(int i=0;i<contactPojoArrayList.size();i++){
+
+                if(!contactPojoArrayList.get(i).getContactName().trim().equals(name) || !contactPojoArrayList.get(i).getContactNumber().trim().equals(phoneNumber)){
+                    flag = 1;
+
+                }else{
+                    flag =0;
+                    break;
+                }
+
+            }
+            if(flag == 1){
+                contactPojoArrayList.add(new ContactPojo(phoneUri,name, phoneNumber));
+            }
             programAdapter.notifyDataSetChanged();
         }
     }
