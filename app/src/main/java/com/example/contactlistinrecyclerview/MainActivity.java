@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             programAdapter.notifyDataSetChanged();*/
 
 
-            //these codes are for eliminating duplicate contacts with same name and number
+            //these (89-107) codes are for eliminating duplicate contacts with same name and number
             int flag = 0;
             if(contactPojoArrayList.size() == 0){
                 contactPojoArrayList.add(new ContactPojo(phoneUri,name, phoneNumber));
