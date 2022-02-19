@@ -72,12 +72,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getContacts() {
-        Cursor phones=getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+        Cursor cursor=getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                 null,null,null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME);
-        while (phones.moveToNext()){
-            @SuppressLint("Range") String name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-            @SuppressLint("Range") String phoneNumber=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-            @SuppressLint("Range") String phoneUri=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.PHOTO_URI));
+        while (cursor.moveToNext()){
+            @SuppressLint("Range") String name=cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+            @SuppressLint("Range") String phoneNumber=cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+            @SuppressLint("Range") String phoneUri=cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.PHOTO_URI));
 
             //These (82-85) codes are for only showing contacts in RCV
            /* ContactPojo contact=new ContactPojo(phoneUri,name,phoneNumber);
